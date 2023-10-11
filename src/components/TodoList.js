@@ -62,7 +62,7 @@ const TodoList = () => {
             <div className='task-container'>
                 {taskList &&
                     taskList.map((obj, index) => {
-                        const isCompleted = obj.Done; // Проверка на Done
+                        const isCompleted = obj.Done; 
                         if (
                             (filterStatus === 'done' && isCompleted) ||
                             (filterStatus === 'to do' && !isCompleted) ||

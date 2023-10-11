@@ -46,7 +46,7 @@ const CreateTask = ({ modal, toggle, save }) => {
       taskName: '',
       description: '',
     });
-    toggle(); // Закрыть модальное окно после сохранения
+    toggle(); 
   }
 
   return (

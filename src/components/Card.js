@@ -34,7 +34,7 @@ const Card = ({ taskObj, index, deleteTask, updateListArray }) => {
 
     const updateTask = (updatedTask) => {
         updateListArray(updatedTask, index);
-        toggle(); // Закрыть модальное окно после обновления
+        toggle(); 
     }
 
     const handleDelete = () => {
