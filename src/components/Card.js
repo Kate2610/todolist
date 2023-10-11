@@ -45,11 +45,15 @@ const Card = ({taskObj, index, deleteTask, updateListArray}) => {
             <div class = "task-holder">
                 <span class = "card-header" style={{"background-color": colors[index%5].secondaryColor, "border-radius": "10px"}}>{taskObj.Name}</span>
                 <p className = "mt-3">{taskObj.Description}</p>
-
+                  <input type="checkbox" style={{ "position": "absolute", "left": "20px", "bottom": "25px" }} />
+                <p style={{ "position": "absolute", "left": "40px", "bottom": "5px" }}>Done</p>
+                
                 <div style={{"position": "absolute", "right" : "20px", "bottom" : "20px"}}>
-                    <i class = 'far fa-edit' style={{"color" : colors[index%5].primaryColor, "cursor" : "pointer",  marginRight: '10px'}} onClick = {() => setModal(true)}></i>
+                   
+                    <i class='far fa-edit' style={{ "color": colors[index % 5].primaryColor, "cursor": "pointer", marginRight: '10px' }} onClick={() => setModal(true)}></i>
                     <i class="fas fa-trash-alt" style = {{"color" : colors[index%5].primaryColor, "cursor" : "pointer"}} onClick = {handleDelete}></i>
                 </div>
+
         </div>
          <EditTask modal = {modal} toggle = {toggle} updateTask = {updateTask} taskObj = {taskObj}/>
         </div>
